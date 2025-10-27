@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  kv-store:
+    build: ./services/kv-store
+    ports:
+      - "8081:8081"
+    environment:
+      - GRPC_ADDR=:8081
+
+  api-gateway:
+    build: ./services/api-gateway
+    ports:
+      - "8080:8080"
+    environment:
+      - HTTP_ADDR=:8080
+      - KV_GRPC_ADDR=kv-store:8081
+    depends_on:
+      - kv-store
