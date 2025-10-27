@@ -1,0 +1,20 @@
+# OS Files
+.DS_Store
+*.swp
+*~
+
+# Go
+*.o
+*.a
+*.so
+bin/
+dist/
+coverage.out
+
+# Proto generated files (will be regenerated)
+**/*.pb.go
+**/*_grpc.pb.go
+
+# Architecture and tasks docs (local reference only)
+architecture.md
+tasks.md
