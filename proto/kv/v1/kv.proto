@@ -4,15 +4,15 @@ package kv.v1;
 
 option go_package = "github.com/censys/kv-store/proto/kv/v1;kv";
 
-// KeyValue service provides operations for a key-value store
+// operations for key-value store
 service KeyValue {
-  // Put stores a value at the given key
+  // put stores value at given key
   rpc Put(PutRequest) returns (PutResponse);
   
-  // Get retrieves the value for the given key
+  // gets value for given key
   rpc Get(GetRequest) returns (GetResponse);
   
-  // Delete removes the key from the store
+  // deletes key from the store
   rpc Delete(DeleteRequest) returns (DeleteResponse);
 }
 
